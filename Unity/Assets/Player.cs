@@ -19,4 +19,4 @@ public class Player : MonoBehaviour {
 			gameOver = true;
 		}
 	}
-}
+} 
