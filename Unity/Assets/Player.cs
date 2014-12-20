@@ -2,14 +2,21 @@
 using System.Collections;
 
 public class Player : MonoBehaviour {
+	private bool gameOver; //ゲームオーバーフラグ
 
-	// Use this for initialization
+	// 初期化
 	void Start () {
-	
+		gameOver = false; //ゲームオーバーフラグを初期化
 	}
 	
-	// Update is called once per frame
+	// 毎フレームごとに更新
 	void Update () {
 	
+	}
+
+	void OnTriggerEnter2D(Collision2D col){ // 衝突判定
+		if (col.gameObject.tag == "Enemy") { // Enemyに当たったらゲームオーバーフラグをTrueに
+			gameOver = true;
+		}
 	}
 }
